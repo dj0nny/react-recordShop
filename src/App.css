@@ -1,4 +1,9 @@
 @import url(../node_modules/foundation-sites/dist/css/foundation.min.css);
 @import 'https://fonts.googleapis.com/css?family=Montserrat';
 body {
-  font-family: 'Montserrat' !important; }
+  font-family: 'Montserrat' !important;
+  text-align: center;
+  color: aqua;
+  font-size: 20px;
+  border: 1px solid red;
+  background-color: darkgreen; }
