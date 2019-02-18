@@ -14,13 +14,13 @@ class App extends Component {
 		return (
 			<ApolloProvider client={client}>
 				<div className="App">
-					<div className="main">
-						<div className="row">
-							<div className="columns medium-12 text-center">
-								<h1>React Record Shop</h1>
+					<div className="container">
+						<div className="columns">
+							<div className="column is-12">
+								<h1 className="title">React Record Shop</h1>
 							</div>
 						</div>
-						<RecordsList />
+						<div className="record-list" />
 					</div>
 				</div>
 			</ApolloProvider>
