@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 import RecordsList from './components/RecordsList/RecordsList';
+import AddRecord from './components/AddRecord/AddRecord';
 
 import './App.css';
 
@@ -20,7 +21,10 @@ class App extends Component {
 								<h1 className="title">React Record Shop</h1>
 							</div>
 						</div>
-						<div className="record-list" />
+						<div className="record-list">
+							<RecordsList />
+							<AddRecord />
+						</div>
 					</div>
 				</div>
 			</ApolloProvider>

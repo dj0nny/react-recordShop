@@ -13,7 +13,16 @@ const getBandsQuery = gql`
 `;
 
 export class AddRecord extends Component {
-	state = {};
+	displayBand() {
+		var data = this.props.data;
+		if (data.loading) {
+			return <option disabled>Loading bands</option>;
+		} else {
+			return data.bands.map((band) => {
+				return <option key={band.id}>{band.name}</option>;
+			});
+		}
+	}
 
 	render() {
 		return (
@@ -30,6 +39,7 @@ export class AddRecord extends Component {
 					<label>Band:</label>
 					<select>
 						<option>Select the band</option>
+						{this.displayBand()}
 					</select>
 				</div>
 
@@ -39,4 +49,4 @@ export class AddRecord extends Component {
 	}
 }
 
-export default AddRecord(getBandsQuery)(AddRecord);
+export default graphql(getBandsQuery)(AddRecord);
