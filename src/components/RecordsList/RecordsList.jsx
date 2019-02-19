@@ -1,17 +1,8 @@
 import React, { Component } from 'react';
 import { gql } from 'apollo-boost';
 import { graphql } from 'react-apollo';
+import { getRecordsQuery } from '../../queries/queries';
 
-const getRecordsQuery = gql`
-	{
-		records {
-			id
-			title
-			genre
-			releaseYear
-		}
-	}
-`;
 
 class RecordsList extends Component {
 	state = {};

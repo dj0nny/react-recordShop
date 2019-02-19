@@ -1,16 +1,7 @@
 import React, { Component } from 'react';
 import { gql } from 'apollo-boost';
 import { graphql } from 'react-apollo';
-
-const getBandsQuery = gql`
-	{
-		bands {
-			id
-			name
-			nation
-		}
-	}
-`;
+import { getBandsQuery } from '../../queries/queries';
 
 export class AddRecord extends Component {
 	displayBand() {
