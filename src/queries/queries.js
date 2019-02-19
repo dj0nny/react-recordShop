@@ -1,4 +1,4 @@
-import {gql} from 'apollo-boost';
+import { gql } from 'apollo-boost';
 
 const getRecordsQuery = gql`
 	{
@@ -21,4 +21,13 @@ const getBandsQuery = gql`
 	}
 `;
 
-export {getRecordsQuery, getBandsQuery};
+const addRecordMutation = gql`
+	mutation($title: String!, $genre: String!, $releaseYear: Int, $bandID: ID!) {
+		addRecord(title: $title, genre: $genre, releaseYear: $releaseYear, bandID: $bandID) {
+			title
+			id
+		}
+	}
+`;
+
+export { getRecordsQuery, getBandsQuery, addRecordMutation };
