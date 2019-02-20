@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { gql } from 'apollo-boost';
 import { graphql, compose } from 'react-apollo';
-import { getBandsQuery, addRecordMutation } from '../../queries/queries';
+import { getBandsQuery, addRecordMutation, getRecordsQuery } from '../../queries/queries';
 
 export class AddRecord extends Component {
 	state = {
@@ -34,7 +34,12 @@ export class AddRecord extends Component {
 				genre: this.state.genre,
 				releaseYear: this.state.year,
 				bandID: this.state.band
-			}
+			},
+			refetchQueries: [
+				{
+					query: getRecordsQuery
+				}
+			]
 		});
 	};
 

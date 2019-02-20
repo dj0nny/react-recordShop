@@ -18,7 +18,6 @@ class RecordsList extends Component {
 		}
 	}
 	render() {
-		//console.log(this.props);
 		return (
 			<div className="records-list">
 				<ul>{this.displayRecords()}</ul>
