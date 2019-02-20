@@ -30,4 +30,24 @@ const addRecordMutation = gql`
 	}
 `;
 
-export { getRecordsQuery, getBandsQuery, addRecordMutation };
+const getRecordQuery = gql`
+	query($id: ID) {
+		record(id: $id) {
+			id
+			title
+			genre
+			releaseYear
+			band {
+				name
+				records {
+					id
+					title
+					genre
+					releaseYear
+				}
+			}
+		}
+	}
+`;
+
+export { getRecordsQuery, getBandsQuery, addRecordMutation, getRecordQuery };

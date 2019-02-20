@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { gql } from 'apollo-boost';
 import { graphql, compose } from 'react-apollo';
 import { getBandsQuery, addRecordMutation, getRecordsQuery } from '../../queries/queries';
 

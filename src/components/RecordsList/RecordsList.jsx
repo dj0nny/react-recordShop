@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { gql } from 'apollo-boost';
 import { graphql } from 'react-apollo';
 import { getRecordsQuery } from '../../queries/queries';
-
+import RecordDetails from '../RecordDetails/RecordDetails';
 
 class RecordsList extends Component {
-	state = {};
+	state = {
+		selected: null
+	};
 
 	displayRecords() {
 		var data = this.props.data;
@@ -13,7 +14,16 @@ class RecordsList extends Component {
 			return <span>Loading...</span>;
 		} else {
 			return data.records.map((record) => {
-				return <li key={record.id}>{record.title}</li>;
+				return (
+					<li
+						key={record.id}
+						onClick={(e) => {
+							this.setState({ selected: record.id });
+						}}
+					>
+						{record.title}
+					</li>
+				);
 			});
 		}
 	}
@@ -21,6 +31,7 @@ class RecordsList extends Component {
 		return (
 			<div className="records-list">
 				<ul>{this.displayRecords()}</ul>
+				<RecordDetails recordId={this.state.selected} />
 			</div>
 		);
 	}
