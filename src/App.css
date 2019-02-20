@@ -6933,3 +6933,26 @@ body {
 
 .title {
   text-align: center; }
+
+.records-list .columns {
+  flex-wrap: wrap; }
+
+.record {
+  background: #fff;
+  border: 1px solid #000;
+  margin: 10px;
+  text-align: center;
+  cursor: pointer; }
+
+.record h2 {
+  font-weight: bold;
+  font-size: 20px; }
+
+div#book-details {
+  margin-top: 10px;
+  text-align: center; }
+
+div#book-details .notification.is-danger {
+  background-color: #ff3860;
+  color: #fff;
+  font-weight: bold; }

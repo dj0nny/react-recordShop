@@ -21,10 +21,12 @@ class App extends Component {
 								<h1 className="title">React Record Shop</h1>
 							</div>
 						</div>
-						<div className="record-list">
-							<RecordsList />
-							<AddRecord />
+						<div className="records-list">
+							<div className="columns">
+								<RecordsList />
+							</div>
 						</div>
+						<AddRecord />
 					</div>
 				</div>
 			</ApolloProvider>

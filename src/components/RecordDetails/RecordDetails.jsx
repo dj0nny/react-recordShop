@@ -7,10 +7,10 @@ class RecordDetails extends Component {
 		const { record } = this.props.data;
 		if (record) {
 			return (
-				<div>
+				<div className="details">
 					<h2>{record.title}</h2>
 					<p>{record.genre}</p>
-                    <p>{record.releaseYear}</p>
+					<p>{record.releaseYear}</p>
 					<p>{record.band.name}</p>
 					<p>All records of this band:</p>
 					<ul className="other-records">
@@ -21,7 +21,11 @@ class RecordDetails extends Component {
 				</div>
 			);
 		} else {
-			return <div className="error">No book selected...</div>;
+			return (
+			<div className="notification is-danger">
+				No record selected
+			</div>
+			);
 		}
 	}
 	render() {

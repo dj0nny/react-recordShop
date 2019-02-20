@@ -15,24 +15,27 @@ class RecordsList extends Component {
 		} else {
 			return data.records.map((record) => {
 				return (
-					<li
+					<div
+						className="column is-12 record"
 						key={record.id}
 						onClick={(e) => {
 							this.setState({ selected: record.id });
 						}}
 					>
-						{record.title}
-					</li>
+						<h2 className="record-title">{record.title}</h2>
+					</div>
 				);
 			});
 		}
 	}
 	render() {
 		return (
-			<div className="records-list">
-				<ul>{this.displayRecords()}</ul>
-				<RecordDetails recordId={this.state.selected} />
-			</div>
+			<React.Fragment>
+				<div className="column is-6">{this.displayRecords()}</div>
+				<div className="column is-6">
+					<RecordDetails recordId={this.state.selected} />
+				</div>
+			</React.Fragment>
 		);
 	}
 }
