@@ -5,7 +5,6 @@ import { getRecordQuery } from '../../queries/queries';
 class RecordDetails extends Component {
 	displayRecordDetails() {
 		const { record } = this.props.data;
-		console.log(record);
 		if (record) {
 			return (
 				<div>

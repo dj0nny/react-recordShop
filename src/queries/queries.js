@@ -50,4 +50,4 @@ const getRecordQuery = gql`
 	}
 `;
 
-export { getRecordsQuery, getBandsQuery, addRecordMutation, getRecordQuery };
+export {getRecordsQuery, getBandsQuery, addRecordMutation, getRecordQuery};
