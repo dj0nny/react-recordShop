@@ -1,5 +1,11 @@
 # React-recordShop
 
+<p align="center">
+<img src="https://travis-ci.org/dj0nny/react-recordShop.svg?branch=develop">
+<img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat">
+<img src="http://hits.dwyl.io/dj0nny/react-recordShop.svg">
+</p>
+
 This project is an example of a ReactJS web app integrated with Apollo and GraphQL
 <br/><br/>
 <p align="center">
