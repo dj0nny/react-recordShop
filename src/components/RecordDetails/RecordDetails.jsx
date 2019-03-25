@@ -12,7 +12,7 @@ class RecordDetails extends Component {
 					<p>{record.genre}</p>
 					<p>{record.releaseYear}</p>
 					<p>{record.band.name}</p>
-					<p>All records of this band:</p>
+					<p className="other">All records of this band:</p>
 					<ul className="other-records">
 						{record.band.records.map((item) => {
 							return <li key={item.id}>{item.title}</li>;
@@ -29,7 +29,7 @@ class RecordDetails extends Component {
 		}
 	}
 	render() {
-		return <div id="book-details">{this.displayRecordDetails()}</div>;
+		return <div id="record-details">{this.displayRecordDetails()}</div>;
 	}
 }
 

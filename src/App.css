@@ -6948,11 +6948,21 @@ body {
   font-weight: bold;
   font-size: 20px; }
 
-div#book-details {
+div#record-details {
   margin-top: 10px;
   text-align: center; }
 
-div#book-details .notification.is-danger {
+div#record-details .notification.is-danger {
   background-color: #ff3860;
   color: #fff;
   font-weight: bold; }
+
+p.other {
+  font-weight: bold;
+  font-size: 20px; }
+
+h3.title {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: left; }

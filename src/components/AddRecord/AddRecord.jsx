@@ -44,29 +44,39 @@ export class AddRecord extends Component {
 
 	render() {
 		return (
-			<form id="add-record" onSubmit={(e) => this.submitForm(e)}>
-				<div className="form-field">
-					<label>Record title:</label>
-					<input type="text" onChange={(e) => this.setState({ title: e.target.value })} />
-				</div>
-				<div className="form-field">
-					<label>Genre:</label>
-					<input type="text" onChange={(e) => this.setState({ genre: e.target.value })} />
-				</div>
-				<div className="form-field">
-					<label>Year:</label>
-					<input type="number" onChange={(e) => this.setState({ year: parseInt(e.target.value) })} />
-				</div>
-				<div className="form-field">
-					<label>Band:</label>
-					<select onChange={(e) => this.setState({ band: e.target.value })}>
-						<option>Select the band</option>
-						{this.displayBand()}
-					</select>
-				</div>
-
-				<button>Add record</button>
-			</form>
+			<React.Fragment>
+				<h3 className="title">Add new record</h3>
+				<form id="add-record" onSubmit={(e) => this.submitForm(e)}>
+					<div class="field">
+						<label className="label">Record title:</label>
+						<div className="control">
+							<input className="input" type="text" onChange={(e) => this.setState({ title: e.target.value })} />
+						</div>
+					</div>
+					<div class="field">
+						<label className="label">Genre:</label>
+						<div className="control">
+							<input className="input"type="text" onChange={(e) => this.setState({ genre: e.target.value })} />
+						</div> 
+					</div>
+					<div class="field">
+						<label className="label">Year:</label>
+						<div className="control">
+							<input className="input" type="number" onChange={(e) => this.setState({ year: parseInt(e.target.value) })} />
+						</div>
+					</div>
+					<div class="field">
+						<label className="label">Band:</label>
+						<div className="control">
+							<select className="select" onChange={(e) => this.setState({ band: e.target.value })}>
+								<option>Select the band</option>
+								{this.displayBand()}
+							</select>
+						</div>
+					</div>
+					<button className="button">Add record</button>
+				</form>
+			</React.Fragment>
 		);
 	}
 }
